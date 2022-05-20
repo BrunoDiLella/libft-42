@@ -6,7 +6,7 @@
 /*   By: bdi-lell <bdi-lell@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 14:37:48 by bdi-lell          #+#    #+#             */
-/*   Updated: 2022/04/11 14:38:02 by bdi-lell         ###   ########.fr       */
+/*   Updated: 2022/05/07 19:14:26 by bdi-lell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,4 @@ char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	return (str);
 }
+

@@ -6,7 +6,7 @@
 /*   By: bdi-lell <bdi-lell@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 14:31:58 by bdi-lell          #+#    #+#             */
-/*   Updated: 2022/04/11 14:32:04 by bdi-lell         ###   ########.fr       */
+/*   Updated: 2022/05/07 19:03:06 by bdi-lell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,11 @@ t_list  *ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void *))
 	if (!f || !del)
 		return (NULL);
 	first = NULL;
+	
 	while (lst)
 	{
-		if (!(new = ft_lstnew((*f)(lst->content))))
+		new = ft_lstnew((*f)(lst->content));
+        if (!new)
 		{
 			while (first)
 			{

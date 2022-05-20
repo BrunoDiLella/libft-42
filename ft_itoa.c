@@ -6,55 +6,50 @@
 /*   By: bdi-lell <bdi-lell@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 14:28:09 by bdi-lell          #+#    #+#             */
-/*   Updated: 2022/04/11 14:28:44 by bdi-lell         ###   ########.fr       */
+/*   Updated: 2022/04/29 10:29:21 by bdi-lell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int
-	ft_abs(int nbr)
+static	int	int_size(int n)
 {
-	return ((nbr < 0) ? -nbr : nbr);
-}
+	unsigned int	i;
 
-static void
-	ft_strrev(char *str)
-{
-	size_t	length;
-	size_t	i;
-	char	tmp;
-
-	length = ft_strlen(str);
 	i = 0;
-	while (i < length / 2)
-	{
-		tmp = str[i];
-		str[i] = str[length - i - 1];
-		str[length - i - 1] = tmp;
+	if (n == 0)
+		return (2);
+	else if (n < 0)
 		i++;
+	while (n)
+	{
+		i++;
+		n = n / 10;
 	}
+	return (i + 1);
 }
 
-char    *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char	*str;
-	int		is_neg;
-	size_t	length;
+	char			*dest;
+	int				neg;
+	unsigned int	size;
 
-	is_neg = (n < 0);
-	if (!(str = ft_calloc(11 + is_neg, sizeof(*str))))
+	neg = n < 0;
+	size = int_size(n);
+	dest = malloc(sizeof(char) * (size));
+	if (!dest)
 		return (NULL);
-	if (n == 0)
-		str[0] = '0';
-	length = 0;
-	while (n != 0)
+	dest[--size] = '\0';
+	if (!n)
+		dest[--size] = '0';
+	while (n)
 	{
-		str[length++] = '0' + ft_abs(n % 10);
-		n = (n / 10);
+		size--;
+		dest[size] = ((-neg + !neg) * (n % 10) + 48);
+		n = n / 10;
 	}
-	if (is_neg)
-		str[length] = '-';
-	ft_strrev(str);
-	return (str);
+	if (neg)
+		dest[--size] = '-';
+	return (dest);
 }

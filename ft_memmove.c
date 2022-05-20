@@ -6,33 +6,33 @@
 /*   By: bdi-lell <bdi-lell@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 14:49:57 by bdi-lell          #+#    #+#             */
-/*   Updated: 2022/04/08 14:53:00 by bdi-lell         ###   ########.fr       */
+/*   Updated: 2022/04/25 14:46:35 by bdi-lell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memmove(void *dst, const void *src, size_t len)
+void    *ft_memmove(void *dest, const void *src, size_t n)
 {
  int i;
  
- if (dst > src)
+ if (dest > src)
  {
-     i = (int)len - 1;
+     i = (int)n - 1;
      while (i >= 0)
      {
-         *(char*)(dst + i) = *(char*)(src + i);
+         *(char*)(dest + i) = *(char*)(src + i);
          i--;
      }
  }
  else
  {
         i = 0;
-        while (i < (int)len)
+        while (i < (int)n)
         {
-            *(char*)(dst + i) = *(char*)(src + i);
+            *(char*)(dest + i) = *(char*)(src + i);
             i++;
         }
  }
-    return (dst);
+    return (dest);
 }

@@ -6,14 +6,13 @@
 /*   By: bdi-lell <bdi-lell@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 14:33:16 by bdi-lell          #+#    #+#             */
-/*   Updated: 2022/04/11 14:33:18 by bdi-lell         ###   ########.fr       */
+/*   Updated: 2022/05/19 14:30:39 by bdi-lell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int
-	ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t			i;
 
