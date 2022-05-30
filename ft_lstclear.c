@@ -6,13 +6,13 @@
 /*   By: bdi-lell <bdi-lell@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 14:29:25 by bdi-lell          #+#    #+#             */
-/*   Updated: 2022/05/02 14:33:36 by bdi-lell         ###   ########.fr       */
+/*   Updated: 2022/05/23 14:48:37 by bdi-lell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*tmp;
 

@@ -6,13 +6,13 @@
 /*   By: bdi-lell <bdi-lell@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 11:42:49 by bdi-lell          #+#    #+#             */
-/*   Updated: 2022/04/08 11:43:18 by bdi-lell         ###   ########.fr       */
+/*   Updated: 2022/05/23 14:11:31 by bdi-lell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    return (c >= 32 && c <= 126);
+	return (c >= 32 && c <= 126);
 }

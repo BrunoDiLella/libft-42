@@ -6,7 +6,7 @@
 /*   By: bdi-lell <bdi-lell@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 14:39:24 by bdi-lell          #+#    #+#             */
-/*   Updated: 2022/05/07 18:01:09 by bdi-lell         ###   ########.fr       */
+/*   Updated: 2022/05/23 14:50:38 by bdi-lell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (start < ft_strlen(s))
 		start_len = ft_strlen(s + start);
-	if ( start >  ft_strlen(s))
+	if (start > ft_strlen(s))
 	{
-		sub = malloc(1);
-		*sub = '\0';
+	sub = malloc(1);
+	*sub = '\0';
 		return (sub);
 	}
 	else if (start_len < len)
@@ -34,4 +34,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(sub, (s + start), len + 1);
 	return (sub);
 }
-

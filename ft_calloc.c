@@ -6,19 +6,19 @@
 /*   By: bdi-lell <bdi-lell@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 14:54:53 by bdi-lell          #+#    #+#             */
-/*   Updated: 2022/04/27 11:34:36 by bdi-lell         ###   ########.fr       */
+/*   Updated: 2022/05/23 14:11:47 by bdi-lell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-    void    *ptr;
+	void	*ptr;
 
-    ptr = malloc(count * size);
-    if (ptr == NULL)
-        return (NULL);
-    ft_bzero(ptr, count * size);
-    return (ptr);
+	ptr = malloc(count * size);
+	if (ptr == NULL)
+		return (NULL);
+	ft_bzero(ptr, count * size);
+	return (ptr);
 }

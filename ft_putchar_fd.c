@@ -6,14 +6,13 @@
 /*   By: bdi-lell <bdi-lell@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 14:33:49 by bdi-lell          #+#    #+#             */
-/*   Updated: 2022/04/23 11:55:54 by bdi-lell         ###   ########.fr       */
+/*   Updated: 2022/05/23 15:02:15 by bdi-lell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void
-	ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
